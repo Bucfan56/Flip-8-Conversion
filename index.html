@@ -53,37 +53,20 @@
 
    .hero-panel {
     aspect-ratio: 5430 / 2701;
-    isolation: isolate;
    }
 
    .hero-title {
     font-family: 'Arboria Black', 'Montserrat', sans-serif;
     font-size: clamp(3.7rem, 8.75vw, 9.85rem);
-    line-height: 0.86;
-    letter-spacing: -0.055em;
-    transform: translateY(-3%);
-   }
-
-   .hero-title > span {
-    display: block;
-   }
-
-   .hero-title span span {
-    display: inline;
-   }
-
-   .hero-line {
-    white-space: nowrap;
+    line-height: 1;
+    letter-spacing: .02em;
+    transform: translateX(-5.5%) translateY(-21%);
    }
 
    .hero-wrap-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(8.4rem, 12vw, 14.25rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 12.5vw, 12.75rem) minmax(0, 1fr);
     align-items: center;
-   }
-
-   .hero-recovery-row {
-    grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 27vw, 32rem) minmax(0, 1fr);
    }
 
    .hero-full-row {
@@ -92,16 +75,12 @@
 
    .hero-wrap-left {
     grid-column: 1;
-    min-width: 0;
     text-align: right;
-    white-space: nowrap;
    }
 
    .hero-wrap-right {
     grid-column: 3;
-    min-width: 0;
     text-align: left;
-    white-space: nowrap;
    }
 
    .hero-person-cutout {
@@ -110,7 +89,6 @@
      Placing it above the headline masks the center of the text so the copy
      appears to wrap around the athlete's silhouette.
     */
-    z-index: 999 !important;
    }
 
    .product-panel {
@@ -196,15 +174,14 @@
 
    @media (max-width: 767px) {
     .hero-title {
-     transform: translateY(-3%);
+     font-size: clamp(1.15rem, 5vw, 3.75rem);
+     transform: translateX(-4.2%) translateY(-15%);
+     line-height: 1;
+     letter-spacing: 0.1em;
     }
 
     .hero-wrap-row {
-     grid-template-columns: minmax(0, 1fr) clamp(4.8rem, 18vw, 7rem) minmax(0, 1fr);
-    }
-
-    .hero-recovery-row {
-     grid-template-columns: minmax(0, 1fr) clamp(6.5rem, 31vw, 11rem) minmax(0, 1fr);
+     grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
     }
 
     .scoop-scene {
@@ -237,18 +214,18 @@
     <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/5 via-transparent to-transparent"></div>
     <div class="absolute inset-x-0 top-[10%] z-20 px-3 md:px-8 pointer-events-none">
      <h1 class="hero-title mx-auto max-w-[1780px] font-black text-center uppercase">
-      <span class="hero-line text-white block">
+      <span class="text-white block">
        A NEXT GEN FORMULA
       </span>
-      <span class="hero-wrap-row">
-       <span class="hero-wrap-left text-white">
+      <span class="hero-full-row block">
+       <span class="text-white">
         BUILT FOR
        </span>
-       <span class="hero-wrap-right text-[#242225]">
+       <span class="text-[#242225]">
         PERFORMANCE,
        </span>
       </span>
-      <span class="hero-wrap-row hero-recovery-row text-[#242225]">
+      <span class="hero-wrap-row text-[#242225]">
        <span class="hero-wrap-left">
         RECOVERY
        </span>

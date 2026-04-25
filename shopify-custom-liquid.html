@@ -100,24 +100,12 @@
   font-family: 'Arboria Black', 'Montserrat', sans-serif;
   font-size: clamp(3.7rem, 8.75vw, 9.85rem);
   font-weight: 900;
-  line-height: 0.88;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
-  transform: translateY(-3%);
+  transform: translateX(-5.5%) translateY(-21%);
  }
-
-.flip8-hero-title > span {
-  display: block;
- }
-
-.flip8-hero-title span span {
-  display: inline;
-}
-
-.flip8-hero-line {
-  white-space: nowrap;
-}
 
  .flip8-white {
   color: #fff;
@@ -129,30 +117,26 @@
 
  .flip8-hero-wrap-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(8.4rem, 12vw, 14.25rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 12.5vw, 12.75rem) minmax(0, 1fr);
   align-items: center;
  }
 
-.flip8-hero-recovery-row {
- grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 27vw, 32rem) minmax(0, 1fr);
-}
+ .flip8-hero-full-row {
+  display: block;
+ }
 
  .flip8-hero-wrap-left {
   grid-column: 1;
-  min-width: 0;
   text-align: right;
-  white-space: nowrap;
  }
 
  .flip8-hero-wrap-right {
   grid-column: 3;
-  min-width: 0;
   text-align: left;
-  white-space: nowrap;
  }
 
  .flip8-hero-cutout {
-  z-index: 999 !important;
+  z-index: 30;
   pointer-events: none;
   user-select: none;
  }
@@ -382,16 +366,15 @@
 
  @media (max-width: 767px) {
   .flip8-hero-title {
-   transform: translateY(-3%);
+  font-size: clamp(1.15rem, 5vw, 3.75rem);
+  transform: translateX(-4.2%) translateY(-15%);
+  line-height: 1;
+  letter-spacing: 0.1em;
   }
 
   .flip8-hero-wrap-row {
-   grid-template-columns: minmax(0, 1fr) clamp(4.8rem, 18vw, 7rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
   }
-
- .flip8-hero-recovery-row {
-  grid-template-columns: minmax(0, 1fr) clamp(6.5rem, 31vw, 11rem) minmax(0, 1fr);
- }
 
   .flip8-title-column {
    max-width: 100%;
@@ -432,12 +415,12 @@
    <div class="flip8-hero-gradient" aria-hidden="true"></div>
    <div class="flip8-hero-copy">
     <h1 class="flip8-hero-title">
-     <span class="flip8-hero-line flip8-white">A NEXT GEN FORMULA</span>
-     <span class="flip8-hero-wrap-row">
-      <span class="flip8-hero-wrap-left flip8-white">BUILT FOR</span>
-      <span class="flip8-hero-wrap-right flip8-dark">PERFORMANCE,</span>
+     <span class="flip8-white">A NEXT GEN FORMULA</span>
+     <span class="flip8-hero-full-row">
+      <span class="flip8-white">BUILT FOR</span>
+      <span class="flip8-dark">PERFORMANCE,</span>
      </span>
-     <span class="flip8-hero-wrap-row flip8-hero-recovery-row flip8-dark">
+     <span class="flip8-hero-wrap-row flip8-dark">
       <span class="flip8-hero-wrap-left">RECOVERY</span>
       <span class="flip8-hero-wrap-right">&amp; RESULTS.</span>
      </span>
