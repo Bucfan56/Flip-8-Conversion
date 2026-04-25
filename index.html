@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   FLIP 8 - Next Gen Formula
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+    font-family: 'Montserrat', sans-serif;
+   }
+
+   .text-outline {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+   }
+
+   .circular-text {
+    animation: rotate 20s linear infinite;
+   }
+
+   .hero-title {
+    text-wrap: balance;
+   }
+
+   .hero-person-cutout {
+    /*
+     The transparent PNG is the same canvas size as the background image.
+     Placing it above the headline masks the center of the text so the copy
+     appears to wrap around the athlete's silhouette.
+    */
+    filter: drop-shadow(0 12px 24px rgb(0 0 0 / 0.12));
+   }
+
+   @keyframes rotate {
+    from {
+     transform: rotate(0deg);
+    }
+    to {
+     transform: rotate(360deg);
+    }
+   }
+  </style>
+ </head>
+ <body class="bg-[#f2e8df] text-[#1a1a1a] overflow-x-hidden">
+  <!-- Hero Section -->
+  <section class="relative w-full h-[700px] overflow-hidden">
+   <img alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky" class="absolute inset-0 z-0 w-full h-full object-cover" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"/>
+   <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/10 via-transparent to-transparent"></div>
+   <div class="absolute inset-0 z-20 flex flex-col items-center pt-16 px-4 pointer-events-none">
+    <h1 class="hero-title text-4xl md:text-7xl lg:text-8xl font-black text-center leading-[0.9] tracking-tighter uppercase max-w-7xl">
+     <span class="text-white block">
+      A NEXT GEN FORMULA
+     </span>
+     <span class="text-[#1a1a1a] block">
+      BUILT FOR PERFORMANCE,
+     </span>
+     <span class="text-[#1a1a1a] block">
+      RECOVERY &amp; RESULTS.
+     </span>
+    </h1>
+   </div>
+   <img alt="" aria-hidden="true" class="hero-person-cutout absolute inset-0 z-30 w-full h-full object-cover pointer-events-none select-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8_man_no_back.png"/>
+  </section>
+  <!-- Product Details Section -->
+  <section class="max-w-7xl mx-auto px-6 md:px-12 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
+   <!-- Left Column -->
+   <div class="flex flex-col z-10">
+    <div class="mb-12">
+     <h2 class="text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter mb-4">
+      SAME
+      <br/>
+      WORK.
+     </h2>
+     <div class="flex flex-col items-start">
+      <span class="bg-[#f9a072] text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter px-2 mb-2">
+       BETTER
+      </span>
+      <span class="bg-[#f9a072] text-7xl md:text-9xl font-black leading-[0.85] tracking-tighter px-2">
+       GAINS.
+      </span>
+     </div>
+    </div>
+    <!-- Jar Image with Hand -->
+    <div class="relative mt-auto -ml-12 md:-ml-24">
+     <img alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text" class="w-full max-w-lg" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand.webp"/>
+    </div>
+   </div>
+   <!-- Right Column -->
+   <div class="flex flex-col justify-center relative">
+    <!-- Circular Text and Scoop -->
+    <div class="relative w-full flex justify-center lg:justify-end mb-16">
+     <div class="relative w-80 h-80">
+      <!-- Circular Text SVG -->
+      <svg class="w-full h-full circular-text" viewBox="0 0 200 200">
+       <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
+       </path>
+       <text class="text-[14px] font-bold uppercase tracking-[0.2em]">
+        <textPath href="#circlePath">
+         SMARTER RECOVERY • AMINO ACID SUPPORT •
+        </textPath>
+       </text>
+      </svg>
+      <!-- Scoop Image -->
+      <div class="absolute inset-0 flex items-center justify-center">
+       <img alt="A scoop of white supplement powder being held by a hand" class="w-48 h-48 object-contain rounded-full" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
+      </div>
+      <!-- Hand holding scoop (positioned to the right) -->
+      <img alt="A hand reaching in from the right holding a scoop" class="absolute top-1/2 -right-48 transform -translate-y-1/2 w-96 pointer-events-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only.webp"/>
+     </div>
+    </div>
+    <!-- Descriptive Text -->
+    <div class="max-w-md lg:ml-auto">
+     <h4 class="text-xl md:text-2xl font-black leading-tight mb-8 uppercase">
+      ONE SCOOP OF FLIP 8 IS DESIGNED TO TARGET MULTIPLE PHYSIOLOGICAL PILLARS OF PERFORMANCE:
+     </h4>
+     <p class="text-lg md:text-xl font-medium leading-relaxed">
+      Muscular output, endurance capacity, cellular energy metabolism, hydration, and recovery, so training effort actually translates into results.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Footer / Bottom Hand (Visual element from screenshot) -->
+  <div class="fixed bottom-0 left-0 w-full pointer-events-none z-0">
+   <!-- This is represented by the hand in the left column already, but adding a subtle gradient or shadow if needed -->
+  </div>
+ </body>
+</html>
