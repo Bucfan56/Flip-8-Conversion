@@ -36,18 +36,18 @@
    }
 
    .hero-panel {
-    height: clamp(360px, 40.7vw, 700px);
+    aspect-ratio: 5430 / 2701;
    }
 
    .hero-title {
-    font-size: clamp(2rem, 4.95vw, 4.85rem);
+    font-size: clamp(1.7rem, 4.7vw, 4.45rem);
     line-height: 0.94;
     letter-spacing: -0.055em;
    }
 
    .hero-wrap-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) clamp(11rem, 18vw, 18rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 12.5vw, 12.75rem) minmax(0, 1fr);
     align-items: center;
    }
 
@@ -67,16 +67,18 @@
      Placing it above the headline masks the center of the text so the copy
      appears to wrap around the athlete's silhouette.
     */
-    filter: drop-shadow(0 12px 24px rgb(0 0 0 / 0.12));
    }
 
    .product-panel {
-    background:
-     linear-gradient(180deg, rgb(255 255 255 / 0.98) 0%, rgb(234 223 214 / 0.92) 8%, #eadfd6 18%, #eadfd6 86%, rgb(255 255 255 / 0.94) 100%);
+    background: linear-gradient(180deg, #ffffff 0%, rgb(234 223 214 / 0.88) 8%, #eadfd6 17%, #eadfd6 100%);
    }
 
    .product-content {
-    min-height: clamp(980px, 73vw, 1115px);
+    min-height: clamp(650px, 53vw, 805px);
+   }
+
+   .product-overflow {
+    min-height: clamp(110px, 8vw, 140px);
    }
 
    .stacked-title {
@@ -91,32 +93,27 @@
    }
 
    .copy-block {
-    max-width: 620px;
+    max-width: 580px;
+    width: min(38vw, 580px);
    }
 
-   .scoop-hand {
-    transform-origin: right center;
-   }
-
-   .scoop-lockup {
-    left: min(57vw, 870px);
-   }
-
-   .scoop-hand-image {
-    left: min(63vw, 955px);
+   .scoop-scene {
+    left: min(62vw, 940px);
+    width: clamp(430px, 44vw, 650px);
    }
 
    @media (max-width: 767px) {
     .hero-wrap-row {
-     grid-template-columns: minmax(0, 1fr) clamp(6.2rem, 24vw, 9rem) minmax(0, 1fr);
+     grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
     }
 
-    .scoop-lockup {
+    .scoop-scene {
      left: 50%;
+     width: min(520px, 118vw);
     }
 
-    .scoop-hand-image {
-     left: calc(50% + 105px);
+    .copy-block {
+     width: 100%;
     }
    }
 
@@ -134,10 +131,10 @@
   <main class="page-shell mx-auto">
    <!-- Hero Section -->
    <section class="hero-panel relative w-full overflow-hidden">
-    <img alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky" class="absolute inset-0 z-0 w-full h-full object-cover" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"/>
+    <img alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky" class="absolute inset-0 z-0 w-full h-full object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"/>
     <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/5 via-transparent to-transparent"></div>
-    <div class="absolute inset-x-0 top-[9%] z-20 px-3 md:px-8 pointer-events-none">
-     <h1 class="hero-title mx-auto max-w-[1270px] font-black text-center uppercase">
+    <div class="absolute inset-x-0 top-[11%] z-20 px-3 md:px-8 pointer-events-none">
+     <h1 class="hero-title mx-auto max-w-[1200px] font-black text-center uppercase">
       <span class="text-white block">
        A NEXT GEN FORMULA
       </span>
@@ -159,14 +156,14 @@
       </span>
      </h1>
     </div>
-    <img alt="" aria-hidden="true" class="hero-person-cutout absolute inset-0 z-30 w-full h-full object-cover pointer-events-none select-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8_man_no_back.png"/>
+    <img alt="" aria-hidden="true" class="hero-person-cutout absolute inset-0 z-30 w-full h-full object-contain pointer-events-none select-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8_man_no_back.png"/>
    </section>
 
    <!-- Product Details Section -->
    <section class="product-panel full-bleed relative">
-    <div class="product-content page-shell relative mx-auto overflow-visible px-7 pt-20 md:px-20 md:pt-24 lg:px-24">
+    <div class="product-content page-shell relative mx-auto overflow-visible px-7 pt-16 md:px-20 md:pt-20 lg:px-24">
      <!-- Left Column -->
-     <div class="relative z-20 max-w-[620px] text-center lg:pt-4">
+     <div class="relative z-20 max-w-[560px] text-center lg:pt-2">
       <h2 class="stacked-title font-black uppercase">
        <span class="block">
         SAME
@@ -184,28 +181,32 @@
      </div>
 
      <!-- Jar Image with Hand -->
-     <img alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text" class="absolute -bottom-40 -left-64 z-10 w-[820px] max-w-none md:-bottom-52 md:-left-80 md:w-[980px] lg:-bottom-60 lg:-left-96 lg:w-[1120px] xl:-bottom-64 xl:-left-[470px] xl:w-[1240px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand.webp"/>
+     <img alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text" class="absolute -bottom-32 -left-36 z-10 w-[520px] max-w-none md:-bottom-36 md:-left-52 md:w-[640px] lg:-bottom-40 lg:-left-64 lg:w-[680px] xl:-left-72 xl:w-[760px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand.webp"/>
 
      <!-- Right Column -->
-     <!-- Circular Text and Scoop -->
-     <div class="scoop-lockup absolute top-24 z-30 h-[310px] w-[310px] -translate-x-1/2 md:top-24 md:h-[390px] md:w-[390px] lg:top-20 lg:h-[420px] lg:w-[420px]">
-      <svg class="w-full h-full circular-text" viewBox="0 0 200 200">
-       <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
-       </path>
-       <text class="text-[13px] font-bold uppercase tracking-[0.22em] fill-[#242225]">
-        <textPath href="#circlePath">
-         SMARTER RECOVERY • AMINO ACID SUPPORT •
-        </textPath>
-       </text>
-      </svg>
-      <div class="absolute inset-0 flex items-center justify-center">
-       <img alt="A scoop of white supplement powder being held by a hand" class="relative z-20 w-40 rotate-[-13deg] object-contain md:w-52 lg:w-56" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
+     <!-- Circular Text, Scoop, and Hand -->
+     <div class="scoop-scene absolute top-14 z-30 -translate-x-1/2 md:top-12 lg:top-10">
+      <div class="relative aspect-[2.1/1] w-full">
+       <img alt="A hand reaching in from the right toward the scoop" class="absolute right-[-43%] top-[5%] z-10 w-[118%] max-w-none pointer-events-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only.webp"/>
+       <div class="absolute left-0 top-1/2 z-20 h-[62%] w-[40%] -translate-y-1/2">
+        <svg class="w-full h-full circular-text" viewBox="0 0 200 200">
+         <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
+         </path>
+         <text class="text-[13px] font-bold uppercase tracking-[0.22em] fill-[#242225]">
+          <textPath href="#circlePath">
+           SMARTER RECOVERY • AMINO ACID SUPPORT •
+          </textPath>
+         </text>
+        </svg>
+        <div class="absolute inset-0 flex items-center justify-center">
+         <img alt="A scoop of white supplement powder being held by a hand" class="relative z-20 w-[45%] rotate-[-13deg] object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
+        </div>
+       </div>
       </div>
      </div>
-     <img alt="A hand reaching in from the right toward the scoop" class="scoop-hand scoop-hand-image absolute top-24 z-20 w-[660px] max-w-none pointer-events-none md:top-20 md:w-[820px] lg:top-16 lg:w-[940px] xl:w-[1040px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only.webp"/>
 
      <!-- Descriptive Text -->
-     <div class="copy-block relative z-30 ml-auto mt-[500px] pb-24 md:mt-[560px] lg:mr-24 lg:mt-[545px]">
+     <div class="copy-block relative z-30 ml-auto mt-[360px] pb-20 md:mt-[415px] lg:mr-12 lg:mt-[380px] xl:mr-20">
       <h4 class="mb-10 text-2xl font-black leading-tight tracking-[0.02em] uppercase md:text-[2rem]">
        ONE SCOOP OF FLIP 8 IS DESIGNED
        <br class="hidden md:block"/>
@@ -219,6 +220,7 @@
      </div>
     </div>
    </section>
+  <div class="product-overflow full-bleed bg-white"></div>
   </main>
  </body>
 </html>
