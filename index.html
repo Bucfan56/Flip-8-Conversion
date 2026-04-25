@@ -82,6 +82,10 @@
     align-items: center;
    }
 
+   .hero-recovery-row {
+    grid-template-columns: minmax(0, 1fr) clamp(7rem, 22cqw, 26rem) minmax(0, 1fr);
+   }
+
    .hero-full-row {
     display: block;
    }
@@ -194,6 +198,10 @@
      grid-template-columns: minmax(0, 1fr) clamp(4rem, 18cqw, 7rem) minmax(0, 1fr);
     }
 
+    .hero-recovery-row {
+     grid-template-columns: minmax(0, 1fr) clamp(7rem, 22cqw, 26rem) minmax(0, 1fr);
+    }
+
     .scoop-scene {
      right: calc((100% - 100vw) / 2);
      top: clamp(220px, 52vw, 320px);
@@ -235,7 +243,7 @@
         PERFORMANCE,
        </span>
       </span>
-      <span class="hero-wrap-row text-[#242225]">
+      <span class="hero-wrap-row hero-recovery-row text-[#242225]">
        <span class="hero-wrap-left">
         RECOVERY
        </span>

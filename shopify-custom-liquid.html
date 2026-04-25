@@ -133,6 +133,10 @@
   align-items: center;
  }
 
+.flip8-hero-recovery-row {
+ grid-template-columns: minmax(0, 1fr) clamp(7rem, 22cqw, 26rem) minmax(0, 1fr);
+}
+
  .flip8-hero-wrap-left {
   grid-column: 1;
   text-align: right;
@@ -381,6 +385,10 @@
    grid-template-columns: minmax(0, 1fr) clamp(5rem, 15.5cqw, 18.75rem) minmax(0, 1fr);
   }
 
+ .flip8-hero-recovery-row {
+  grid-template-columns: minmax(0, 1fr) clamp(7rem, 22cqw, 26rem) minmax(0, 1fr);
+ }
+
   .flip8-title-column {
    max-width: 100%;
   }
@@ -425,7 +433,7 @@
       <span class="flip8-hero-wrap-left flip8-white">BUILT FOR</span>
       <span class="flip8-hero-wrap-right flip8-dark">PERFORMANCE,</span>
      </span>
-     <span class="flip8-hero-wrap-row flip8-dark">
+     <span class="flip8-hero-wrap-row flip8-hero-recovery-row flip8-dark">
       <span class="flip8-hero-wrap-left">RECOVERY</span>
       <span class="flip8-hero-wrap-right">&amp; RESULTS.</span>
      </span>
