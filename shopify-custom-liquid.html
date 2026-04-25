@@ -58,6 +58,7 @@
   width: 100%;
   overflow: hidden;
   aspect-ratio: 5430 / 2701;
+  isolation: isolate;
  }
 
  .flip8-hero-bg,
@@ -99,11 +100,11 @@
   font-family: 'Arboria Black', 'Montserrat', sans-serif;
   font-size: clamp(3.7rem, 8.75vw, 9.85rem);
   font-weight: 900;
-  line-height: 0.94;
+  line-height: 0.88;
   letter-spacing: -0.055em;
   text-align: center;
   text-transform: uppercase;
-  transform: translateX(-4.9%) translateY(-10%);
+  transform: translateY(-3%);
  }
 
 .flip8-hero-title > span {
@@ -128,22 +129,30 @@
 
  .flip8-hero-wrap-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 12.5vw, 12.75rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(8.4rem, 12vw, 14.25rem) minmax(0, 1fr);
   align-items: center;
  }
 
+.flip8-hero-recovery-row {
+ grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 27vw, 32rem) minmax(0, 1fr);
+}
+
  .flip8-hero-wrap-left {
   grid-column: 1;
+  min-width: 0;
   text-align: right;
+  white-space: nowrap;
  }
 
  .flip8-hero-wrap-right {
   grid-column: 3;
+  min-width: 0;
   text-align: left;
+  white-space: nowrap;
  }
 
  .flip8-hero-cutout {
-  z-index: 30;
+  z-index: 999 !important;
   pointer-events: none;
   user-select: none;
  }
@@ -373,13 +382,16 @@
 
  @media (max-width: 767px) {
   .flip8-hero-title {
-   font-size: clamp(1.85rem, 6.45vw, 2.65rem);
-   transform: translateX(-2%);
+   transform: translateY(-3%);
   }
 
   .flip8-hero-wrap-row {
-   grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
+   grid-template-columns: minmax(0, 1fr) clamp(4.8rem, 18vw, 7rem) minmax(0, 1fr);
   }
+
+ .flip8-hero-recovery-row {
+  grid-template-columns: minmax(0, 1fr) clamp(6.5rem, 31vw, 11rem) minmax(0, 1fr);
+ }
 
   .flip8-title-column {
    max-width: 100%;
@@ -425,7 +437,7 @@
       <span class="flip8-hero-wrap-left flip8-white">BUILT FOR</span>
       <span class="flip8-hero-wrap-right flip8-dark">PERFORMANCE,</span>
      </span>
-     <span class="flip8-hero-wrap-row flip8-dark">
+     <span class="flip8-hero-wrap-row flip8-hero-recovery-row flip8-dark">
       <span class="flip8-hero-wrap-left">RECOVERY</span>
       <span class="flip8-hero-wrap-right">&amp; RESULTS.</span>
      </span>
