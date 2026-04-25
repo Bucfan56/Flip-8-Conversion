@@ -106,9 +106,17 @@
   transform: translateX(-4.9%) translateY(-10%);
  }
 
- .flip8-hero-title span {
+.flip8-hero-title > span {
   display: block;
  }
+
+.flip8-hero-title span span {
+  display: inline;
+}
+
+.flip8-hero-line {
+  white-space: nowrap;
+}
 
  .flip8-white {
   color: #fff;
@@ -218,11 +226,10 @@
   z-index: 20;
   width: 68.1%;
   height: 100%;
+  object-fit: contain;
+  object-position: right top;
+  max-width: none;
   pointer-events: none;
-  background-image: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only_v2.webp');
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: contain;
  }
 
  .flip8-scoop-image-wrap {
@@ -413,8 +420,8 @@
    <div class="flip8-hero-gradient" aria-hidden="true"></div>
    <div class="flip8-hero-copy">
     <h1 class="flip8-hero-title">
-     <span class="flip8-white">A NEXT GEN FORMULA</span>
-     <span>
+     <span class="flip8-hero-line flip8-white">A NEXT GEN FORMULA</span>
+     <span class="flip8-hero-line">
       <span class="flip8-white">BUILT FOR</span>
       <span class="flip8-dark">PERFORMANCE,</span>
      </span>
@@ -453,9 +460,12 @@
 
     <div class="flip8-scoop-scene" aria-hidden="true">
      <div class="flip8-scoop-inner">
-      <div
+      <img
        class="flip8-hand-image"
-      ></div>
+       src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only_v2.webp"
+       alt=""
+       loading="lazy"
+      >
       <div class="flip8-scoop-image-wrap">
        <img
         class="flip8-scoop-image"
