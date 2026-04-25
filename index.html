@@ -72,11 +72,11 @@
 
    .product-panel {
     background:
-     linear-gradient(180deg, rgb(255 255 255 / 0.96) 0%, rgb(234 223 214 / 0.94) 9%, #eadfd6 19%, #eadfd6 84%, rgb(255 255 255 / 0.9) 100%);
+     linear-gradient(180deg, rgb(255 255 255 / 0.98) 0%, rgb(234 223 214 / 0.92) 8%, #eadfd6 18%, #eadfd6 86%, rgb(255 255 255 / 0.94) 100%);
    }
 
    .product-content {
-    min-height: 940px;
+    min-height: clamp(980px, 73vw, 1115px);
    }
 
    .stacked-title {
@@ -98,9 +98,25 @@
     transform-origin: right center;
    }
 
+   .scoop-lockup {
+    left: min(57vw, 870px);
+   }
+
+   .scoop-hand-image {
+    left: min(63vw, 955px);
+   }
+
    @media (max-width: 767px) {
     .hero-wrap-row {
      grid-template-columns: minmax(0, 1fr) clamp(6.2rem, 24vw, 9rem) minmax(0, 1fr);
+    }
+
+    .scoop-lockup {
+     left: 50%;
+    }
+
+    .scoop-hand-image {
+     left: calc(50% + 105px);
     }
    }
 
@@ -115,7 +131,7 @@
   </style>
  </head>
  <body class="bg-white text-[#242225] overflow-x-hidden">
-  <main class="page-shell mx-auto pt-10 md:pt-24">
+  <main class="page-shell mx-auto">
    <!-- Hero Section -->
    <section class="hero-panel relative w-full overflow-hidden">
     <img alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky" class="absolute inset-0 z-0 w-full h-full object-cover" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"/>
@@ -148,9 +164,9 @@
 
    <!-- Product Details Section -->
    <section class="product-panel full-bleed relative">
-    <div class="product-content page-shell relative mx-auto grid grid-cols-1 overflow-visible px-7 pt-20 md:px-20 md:pt-24 lg:grid-cols-[0.88fr_1.12fr] lg:px-24">
+    <div class="product-content page-shell relative mx-auto overflow-visible px-7 pt-20 md:px-20 md:pt-24 lg:px-24">
      <!-- Left Column -->
-     <div class="relative z-20 pb-[540px] text-center md:pb-[630px] lg:pb-0">
+     <div class="relative z-20 max-w-[620px] text-center lg:pt-4">
       <h2 class="stacked-title font-black uppercase">
        <span class="block">
         SAME
@@ -168,42 +184,38 @@
      </div>
 
      <!-- Jar Image with Hand -->
-     <img alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text" class="absolute -bottom-44 -left-56 z-10 w-[800px] max-w-none md:-bottom-56 md:-left-72 md:w-[980px] lg:-bottom-56 lg:-left-72 lg:w-[960px] xl:-bottom-60 xl:-left-96 xl:w-[1160px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand.webp"/>
+     <img alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text" class="absolute -bottom-40 -left-64 z-10 w-[820px] max-w-none md:-bottom-52 md:-left-80 md:w-[980px] lg:-bottom-60 lg:-left-96 lg:w-[1120px] xl:-bottom-64 xl:-left-[470px] xl:w-[1240px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand.webp"/>
 
      <!-- Right Column -->
-     <div class="relative z-20 flex flex-col items-start pb-24 lg:pl-10">
-      <!-- Circular Text and Scoop -->
-      <div class="relative mb-20 h-[350px] w-full md:h-[420px]">
-       <div class="absolute left-1/2 top-0 z-20 h-[330px] w-[330px] -translate-x-1/2 md:h-[410px] md:w-[410px] lg:left-[39%]">
-        <svg class="w-full h-full circular-text" viewBox="0 0 200 200">
-         <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
-         </path>
-         <text class="text-[13px] font-bold uppercase tracking-[0.22em] fill-[#242225]">
-          <textPath href="#circlePath">
-           SMARTER RECOVERY • AMINO ACID SUPPORT •
-          </textPath>
-         </text>
-        </svg>
-        <div class="absolute inset-0 flex items-center justify-center">
-         <img alt="A scoop of white supplement powder being held by a hand" class="relative z-20 w-44 rotate-[-13deg] object-contain md:w-56" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
-        </div>
-       </div>
-       <img alt="A hand reaching in from the right holding a scoop" class="scoop-hand absolute right-[-420px] top-[-48px] z-10 w-[780px] max-w-none pointer-events-none md:right-[-560px] md:top-[-62px] md:w-[980px] lg:right-[-690px] lg:top-[-58px] lg:w-[1120px] xl:right-[-830px] xl:w-[1280px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only.webp"/>
+     <!-- Circular Text and Scoop -->
+     <div class="scoop-lockup absolute top-24 z-30 h-[310px] w-[310px] -translate-x-1/2 md:top-24 md:h-[390px] md:w-[390px] lg:top-20 lg:h-[420px] lg:w-[420px]">
+      <svg class="w-full h-full circular-text" viewBox="0 0 200 200">
+       <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
+       </path>
+       <text class="text-[13px] font-bold uppercase tracking-[0.22em] fill-[#242225]">
+        <textPath href="#circlePath">
+         SMARTER RECOVERY • AMINO ACID SUPPORT •
+        </textPath>
+       </text>
+      </svg>
+      <div class="absolute inset-0 flex items-center justify-center">
+       <img alt="A scoop of white supplement powder being held by a hand" class="relative z-20 w-40 rotate-[-13deg] object-contain md:w-52 lg:w-56" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
       </div>
+     </div>
+     <img alt="A hand reaching in from the right toward the scoop" class="scoop-hand scoop-hand-image absolute top-24 z-20 w-[660px] max-w-none pointer-events-none md:top-20 md:w-[820px] lg:top-16 lg:w-[940px] xl:w-[1040px]" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only.webp"/>
 
-      <!-- Descriptive Text -->
-      <div class="copy-block lg:ml-10">
-       <h4 class="mb-10 text-2xl font-black leading-tight tracking-[0.02em] uppercase md:text-[2rem]">
-        ONE SCOOP OF FLIP 8 IS DESIGNED
-        <br class="hidden md:block"/>
-        TO TARGET MULTIPLE PHYSIOLOGICAL
-        <br class="hidden md:block"/>
-        PILLARS OF PERFORMANCE:
-       </h4>
-       <p class="text-2xl font-bold leading-[1.45] tracking-[0.01em] md:text-[2rem]">
-        Muscular output, endurance capacity, cellular energy metabolism, hydration, and recovery, so training effort actually translates into results.
-       </p>
-      </div>
+     <!-- Descriptive Text -->
+     <div class="copy-block relative z-30 ml-auto mt-[500px] pb-24 md:mt-[560px] lg:mr-24 lg:mt-[545px]">
+      <h4 class="mb-10 text-2xl font-black leading-tight tracking-[0.02em] uppercase md:text-[2rem]">
+       ONE SCOOP OF FLIP 8 IS DESIGNED
+       <br class="hidden md:block"/>
+       TO TARGET MULTIPLE PHYSIOLOGICAL
+       <br class="hidden md:block"/>
+       PILLARS OF PERFORMANCE:
+      </h4>
+      <p class="text-2xl font-bold leading-[1.45] tracking-[0.01em] md:text-[2rem]">
+       Muscular output, endurance capacity, cellular energy metabolism, hydration, and recovery, so training effort actually translates into results.
+      </p>
      </div>
     </div>
    </section>
