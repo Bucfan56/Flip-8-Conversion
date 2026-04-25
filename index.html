@@ -20,6 +20,14 @@
     font-display: swap;
    }
 
+   @font-face {
+    font-family: 'Arboria Bold';
+    src: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/Arboria-Bold.ttf?v=1690911598') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+   }
+
    body {
     font-family: 'Montserrat', sans-serif;
    }
@@ -97,7 +105,7 @@
 
    .stacked-title {
     font-family: 'Arboria Black', 'Montserrat', sans-serif;
-    font-size: clamp(3.9rem, 7.5vw, 7.6rem);
+    font-size: clamp(4.5rem, 8.6vw, 8.7rem);
     line-height: 0.82;
     letter-spacing: -0.065em;
    }
@@ -114,29 +122,47 @@
 
    .jar-hand {
     left: calc((100% - 100vw) / 2);
-    top: clamp(22.5rem, 33vw, 31.5rem);
-    width: clamp(35rem, 48vw, 53rem);
+    top: clamp(24rem, 34vw, 33rem);
+    width: clamp(39rem, 54vw, 61rem);
    }
 
    .scoop-scene {
     right: calc((100% - 100vw) / 2);
-    width: clamp(840px, 67vw, 1220px);
+    width: clamp(760px, 61vw, 1110px);
+   }
+
+   .hand-image {
+    width: 68.1%;
+    height: 100%;
+    background-image: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only_v2.webp');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+   }
+
+   .circle-copy {
+    font-family: 'Arboria Bold', 'Montserrat', sans-serif;
+    fill: #242225;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
    }
 
    @media (max-width: 1100px) {
     .stacked-title {
-     font-size: clamp(3.2rem, 10vw, 5.8rem);
+     font-size: clamp(3.6rem, 11vw, 6.4rem);
     }
 
     .scoop-scene {
      top: clamp(260px, 34vw, 340px);
-     width: min(760px, 112vw);
+     width: min(700px, 104vw);
     }
 
     .jar-hand {
      left: calc((100% - 100vw) / 2);
-     top: clamp(18rem, 46vw, 26rem);
-     width: min(44rem, 96vw);
+     top: clamp(20rem, 48vw, 28rem);
+     width: min(50rem, 104vw);
     }
 
     .copy-block {
@@ -160,7 +186,7 @@
     .scoop-scene {
      right: calc((100% - 100vw) / 2);
      top: clamp(220px, 52vw, 320px);
-     width: min(640px, 124vw);
+     width: min(590px, 114vw);
     }
 
     .copy-block {
@@ -239,15 +265,15 @@
      <!-- Circular Text, Scoop, and Hand -->
      <div class="scoop-scene absolute top-10 z-30 md:top-8 lg:top-6">
       <div class="relative aspect-[2.35/1] w-full">
-       <img alt="A hand reaching in from the right toward the scoop" class="absolute right-0 top-0 z-20 h-full w-auto max-w-none pointer-events-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only_v2.webp"/>
-       <div class="absolute right-[58%] top-[1%] z-10 h-full w-auto">
+       <div class="hand-image absolute right-0 top-0 z-20 pointer-events-none" aria-hidden="true"></div>
+       <div class="absolute right-[58.5%] top-[9%] z-10 h-[84%] w-auto">
         <img alt="A scoop of white supplement powder being held by a hand" class="h-full w-auto max-w-none object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
        </div>
-       <div class="absolute right-[47%] top-[50%] z-30 h-[148%] aspect-square -translate-y-1/2">
+       <div class="absolute right-[48.5%] top-[51%] z-30 h-[122%] aspect-square -translate-y-1/2">
         <svg class="h-full w-full circular-text" viewBox="0 0 200 200">
          <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
          </path>
-         <text class="text-[13px] font-bold uppercase tracking-[0.22em] fill-[#242225]">
+         <text class="circle-copy">
           <textPath href="#circlePath">
            SMARTER RECOVERY • AMINO ACID SUPPORT •
           </textPath>
