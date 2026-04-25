@@ -58,6 +58,7 @@
   width: 100%;
   overflow: hidden;
   aspect-ratio: 5430 / 2701;
+  container-type: inline-size;
  }
 
  .flip8-hero-bg,
@@ -97,7 +98,7 @@
   margin: 0 auto;
   color: var(--flip8-ink);
   font-family: 'Arboria Black', 'Montserrat', sans-serif;
-  font-size: clamp(3.7rem, 8.75vw, 9.85rem);
+  font-size: clamp(2rem, 8.4cqw, 10.25rem);
   font-weight: 900;
   line-height: 0.88;
   letter-spacing: -0.055em;
@@ -128,7 +129,7 @@
 
  .flip8-hero-wrap-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(8.4rem, 12vw, 14.25rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(5rem, 15.5cqw, 18.75rem) minmax(0, 1fr);
   align-items: center;
  }
 
@@ -373,12 +374,11 @@
 
  @media (max-width: 767px) {
   .flip8-hero-title {
-   font-size: clamp(1.85rem, 6.45vw, 2.65rem);
    transform: translateY(-3%);
   }
 
   .flip8-hero-wrap-row {
-   grid-template-columns: minmax(0, 1fr) clamp(4.8rem, 18vw, 7rem) minmax(0, 1fr);
+   grid-template-columns: minmax(0, 1fr) clamp(5rem, 15.5cqw, 18.75rem) minmax(0, 1fr);
   }
 
   .flip8-title-column {
