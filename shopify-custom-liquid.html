@@ -59,6 +59,7 @@
   overflow: hidden;
   aspect-ratio: 5430 / 2701;
   container-type: inline-size;
+  isolation: isolate;
  }
 
  .flip8-hero-bg,
@@ -129,26 +130,28 @@
 
  .flip8-hero-wrap-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(5rem, 15.5cqw, 18.75rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(7rem, 21cqw, 25rem) minmax(0, 1fr);
   align-items: center;
  }
 
 .flip8-hero-recovery-row {
- grid-template-columns: minmax(0, 1fr) clamp(7rem, 22cqw, 26rem) minmax(0, 1fr);
+ grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 27cqw, 32rem) minmax(0, 1fr);
 }
 
  .flip8-hero-wrap-left {
   grid-column: 1;
+  min-width: 0;
   text-align: right;
  }
 
  .flip8-hero-wrap-right {
   grid-column: 3;
+  min-width: 0;
   text-align: left;
  }
 
  .flip8-hero-cutout {
-  z-index: 30;
+  z-index: 50;
   pointer-events: none;
   user-select: none;
  }
@@ -382,11 +385,11 @@
   }
 
   .flip8-hero-wrap-row {
-   grid-template-columns: minmax(0, 1fr) clamp(5rem, 15.5cqw, 18.75rem) minmax(0, 1fr);
+   grid-template-columns: minmax(0, 1fr) clamp(5rem, 24cqw, 9rem) minmax(0, 1fr);
   }
 
  .flip8-hero-recovery-row {
-  grid-template-columns: minmax(0, 1fr) clamp(7rem, 22cqw, 26rem) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) clamp(6.5rem, 31cqw, 11rem) minmax(0, 1fr);
  }
 
   .flip8-title-column {
