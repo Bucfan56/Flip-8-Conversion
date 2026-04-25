@@ -1,0 +1,500 @@
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+ @font-face {
+  font-family: 'Arboria Black';
+  src: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/Arboria-Black.ttf?v=1690912543') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+ }
+
+@font-face {
+  font-family: 'Arboria Bold';
+  src: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/Arboria-Bold.ttf?v=1690911598') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.flip8-custom-liquid-section {
+  --flip8-ink: #242225;
+  --flip8-cream: #eadfd6;
+  --flip8-highlight: #ffa171;
+  width: 100%;
+  overflow-x: clip;
+  background: #fff;
+  color: var(--flip8-ink);
+  font-family: 'Montserrat', sans-serif;
+ }
+
+.flip8-custom-liquid-section *,
+.flip8-custom-liquid-section *::before,
+.flip8-custom-liquid-section *::after {
+  box-sizing: border-box;
+ }
+
+.flip8-custom-liquid-section img {
+  display: block;
+ }
+
+ .flip8-page-shell {
+  max-width: 1800px;
+  margin: 0 auto;
+ }
+
+ .flip8-main-shell {
+  padding-top: 2.5rem;
+ }
+
+ .flip8-full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+ }
+
+ .flip8-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 5430 / 2701;
+  isolation: isolate;
+ }
+
+ .flip8-hero-bg,
+ .flip8-hero-cutout,
+ .flip8-hero-gradient {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+ }
+
+ .flip8-hero-bg,
+ .flip8-hero-cutout {
+  object-fit: contain;
+ }
+
+ .flip8-hero-bg {
+  z-index: 0;
+ }
+
+ .flip8-hero-gradient {
+  z-index: 10;
+  background: linear-gradient(180deg, rgb(0 0 0 / 0.05), transparent);
+ }
+
+ .flip8-hero-copy {
+  position: absolute;
+  inset-inline: 0;
+  top: 10%;
+  z-index: 20;
+  padding-inline: 0.75rem;
+  pointer-events: none;
+ }
+
+ .flip8-hero-title {
+  max-width: 1780px;
+  margin: 0 auto;
+  color: var(--flip8-ink);
+  font-family: 'Arboria Black', 'Montserrat', sans-serif;
+  font-size: clamp(3.7rem, 5.75vw, 9.85rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-4%) translateY(-21%);
+ }
+
+ .flip8-white {
+  color: #fff;
+ }
+
+ .flip8-dark {
+  color: var(--flip8-ink);
+ }
+
+ .flip8-hero-wrap-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 12.5vw, 12.75rem) minmax(0, 1fr);
+  align-items: center;
+ }
+
+ .flip8-hero-full-row {
+  display: block;
+ }
+
+ .flip8-hero-wrap-left {
+  grid-column: 1;
+  text-align: right;
+ }
+
+ .flip8-hero-wrap-right {
+  grid-column: 3;
+  text-align: left;
+ }
+
+ .flip8-hero-cutout {
+  z-index: 30;
+  pointer-events: none;
+  user-select: none;
+ }
+
+ .flip8-product-panel {
+  position: relative;
+  background: linear-gradient(180deg, #fff 0%, rgb(234 223 214 / 0.88) 8%, var(--flip8-cream) 17%, var(--flip8-cream) 100%);
+ }
+
+ .flip8-product-content {
+  position: relative;
+  min-height: clamp(900px, 68vw, 1060px);
+  margin: 0 auto;
+  padding: 4rem 1.75rem 0;
+  overflow: visible;
+ }
+
+ .flip8-title-column {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  max-width: min(560px, 44vw);
+  text-align: center;
+ }
+
+ .flip8-stacked-title {
+  margin: 0;
+  font-family: 'Arboria Black', 'Montserrat', sans-serif;
+  font-size: clamp(4.4rem, 8.7vw, 8.6rem);
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+ }
+
+ .flip8-stacked-title span {
+  display: block;
+ }
+
+ .flip8-highlight-title {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0 1rem 0.5rem;
+  background: var(--flip8-highlight);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+ }
+
+ .flip8-highlight-title:first-of-type {
+  margin-top: 1.75rem;
+ }
+
+ .flip8-jar-hand {
+  position: absolute;
+  z-index: 10;
+  left: calc((100% - 100vw) / 2);
+  top: clamp(22.5rem, 33vw, 31.5rem);
+  width: clamp(40rem, 53vw, 60rem);
+  max-width: none;
+ }
+
+ .flip8-scoop-scene {
+  position: absolute;
+  top: 2.5rem;
+  right: calc((100% - 100vw) / 2);
+  z-index: 30;
+  width: clamp(840px, 67vw, 1220px);
+ }
+
+ .flip8-scoop-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.35 / 1;
+ }
+
+ .flip8-hand-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  width: 68.1%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right top;
+  max-width: none;
+  pointer-events: none;
+ }
+
+ .flip8-scoop-image-wrap {
+  position: absolute;
+  top: 9%;
+  right: 58.5%;
+  z-index: 10;
+  width: auto;
+  height: 84%;
+ }
+
+ .flip8-scoop-image {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+ }
+
+ .flip8-circle-text-wrap {
+  position: absolute;
+  top: 51%;
+  right: 48.5%;
+  z-index: 30;
+  height: 122%;
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+ }
+
+ .flip8-circular-text {
+  width: 100%;
+  height: 100%;
+  animation: flip8-rotate 20s linear infinite;
+ }
+
+ .flip8-circle-copy {
+  fill: var(--flip8-ink);
+  font-family: 'Arboria Bold', 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+ }
+
+ .flip8-copy-block {
+  position: relative;
+  z-index: 30;
+  width: min(38vw, 580px);
+  max-width: 580px;
+  margin-top: 560px;
+  margin-left: auto;
+  margin-right: 3rem;
+  padding-bottom: 5rem;
+ }
+
+ .flip8-copy-block h4 {
+  margin: 0 0 2.5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+ }
+
+ .flip8-copy-block p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+ }
+
+ .flip8-product-overflow {
+  min-height: clamp(110px, 8vw, 140px);
+  background: #fff;
+ }
+
+ @media (min-width: 768px) {
+  .flip8-main-shell {
+   padding-top: 6rem;
+  }
+
+  .flip8-hero-copy {
+   padding-inline: 2rem;
+  }
+
+  .flip8-product-content {
+   padding: 5rem 5rem 0;
+  }
+ }
+
+ @media (min-width: 1024px) {
+  .flip8-product-content {
+   padding-inline: 6rem;
+  }
+
+  .flip8-title-column {
+   padding-top: 0.5rem;
+  }
+
+  .flip8-scoop-scene {
+   top: 1.5rem;
+  }
+
+  .flip8-copy-block {
+   margin-top: 560px;
+  }
+ }
+
+ @media (min-width: 1280px) {
+  .flip8-copy-block {
+   margin-right: 5rem;
+  }
+ }
+
+ @media (max-width: 1100px) {
+  .flip8-stacked-title {
+   font-size: clamp(3.6rem, 11vw, 6.4rem);
+  }
+
+  .flip8-title-column {
+   max-width: 58vw;
+  }
+
+  .flip8-scoop-scene {
+   top: clamp(260px, 34vw, 340px);
+   width: min(760px, 112vw);
+  }
+
+  .flip8-jar-hand {
+   left: calc((100% - 100vw) / 2);
+   top: clamp(18rem, 46vw, 26rem);
+   width: min(50rem, 104vw);
+  }
+
+  .flip8-copy-block {
+   width: min(88vw, 580px);
+   margin-top: clamp(600px, 74vw, 700px);
+   margin-inline: auto;
+  }
+ }
+
+ @media (max-width: 767px) {
+  .flip8-hero-title {
+  font-size: clamp(1.15rem, 5vw, 3.75rem);
+  transform: translateX(-4.2%) translateY(-15%);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  }
+
+  .flip8-hero-wrap-row {
+  grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
+  }
+
+  .flip8-title-column {
+   max-width: 100%;
+  }
+
+  .flip8-scoop-scene {
+   top: clamp(220px, 52vw, 320px);
+   right: calc((100% - 100vw) / 2);
+   width: min(640px, 124vw);
+  }
+
+  .flip8-copy-block {
+   width: 100%;
+   margin-top: clamp(560px, 100vw, 680px);
+  }
+ }
+
+ @keyframes flip8-rotate {
+  from {
+   transform: rotate(0deg);
+  }
+
+  to {
+   transform: rotate(360deg);
+  }
+ }
+</style>
+
+<section class="flip8-custom-liquid-section">
+ <main class="flip8-page-shell flip8-main-shell">
+  <section class="flip8-hero" aria-label="FLIP 8 performance hero">
+   <img
+    class="flip8-hero-bg"
+    src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"
+    alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky"
+    loading="lazy"
+   >
+   <div class="flip8-hero-gradient" aria-hidden="true"></div>
+   <div class="flip8-hero-copy">
+    <h1 class="flip8-hero-title">
+     <span class="flip8-white">A NEXT GEN FORMULA</span>
+     <span class="flip8-hero-full-row">
+      <span class="flip8-white">BUILT FOR</span>
+      <span class="flip8-dark">PERFORMANCE,</span>
+     </span>
+     <span class="flip8-hero-wrap-row flip8-dark">
+      <span class="flip8-hero-wrap-left">RECOVERY</span>
+      <span class="flip8-hero-wrap-right">&amp; RESULTS.</span>
+     </span>
+    </h1>
+   </div>
+   <img
+    class="flip8-hero-cutout"
+    src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8_man_no_back.png"
+    alt=""
+    aria-hidden="true"
+    loading="lazy"
+   >
+  </section>
+
+  <section class="flip8-product-panel flip8-full-bleed" aria-label="FLIP 8 product performance details">
+   <div class="flip8-product-content flip8-page-shell">
+    <div class="flip8-title-column">
+     <h2 class="flip8-stacked-title">
+      <span>SAME</span>
+      <span>WORK.</span>
+      <span class="flip8-highlight-title">BETTER</span>
+      <span class="flip8-highlight-title">GAINS.</span>
+     </h2>
+    </div>
+
+    <img
+     class="flip8-jar-hand"
+     src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand-2.webp"
+     alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text"
+     loading="lazy"
+    >
+
+    <div class="flip8-scoop-scene" aria-hidden="true">
+     <div class="flip8-scoop-inner">
+      <img
+       class="flip8-hand-image"
+       src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only_v2.webp"
+       alt=""
+       loading="lazy"
+      >
+      <div class="flip8-scoop-image-wrap">
+       <img
+        class="flip8-scoop-image"
+        src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"
+        alt=""
+        loading="lazy"
+       >
+      </div>
+      <div class="flip8-circle-text-wrap">
+       <svg class="flip8-circular-text" viewBox="0 0 200 200">
+        <path id="flip8CirclePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent"></path>
+        <text class="flip8-circle-copy">
+         <textPath href="#flip8CirclePath">SMARTER RECOVERY • AMINO ACID SUPPORT •</textPath>
+        </text>
+       </svg>
+      </div>
+     </div>
+    </div>
+
+    <div class="flip8-copy-block">
+     <h4>
+      ONE SCOOP OF FLIP 8 IS DESIGNED
+      <br>
+      TO TARGET MULTIPLE PHYSIOLOGICAL
+      <br>
+      PILLARS OF PERFORMANCE:
+     </h4>
+     <p>
+      Muscular output, endurance capacity, cellular energy metabolism, hydration, and recovery, so training effort actually translates into results.
+     </p>
+    </div>
+   </div>
+  </section>
+
+  <div class="flip8-product-overflow flip8-full-bleed" aria-hidden="true"></div>
+ </main>
+</section>

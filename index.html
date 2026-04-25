@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   FLIP 8 - Next Gen Formula
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+  <style>
+   @font-face {
+    font-family: 'Arboria Black';
+    src: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/Arboria-Black.ttf?v=1690912543') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+   }
+
+   @font-face {
+    font-family: 'Arboria Bold';
+    src: url('https://cdn.shopify.com/s/files/1/0790/6174/5965/files/Arboria-Bold.ttf?v=1690911598') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+   }
+
+   body {
+    font-family: 'Montserrat', sans-serif;
+   }
+
+   .text-outline {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+   }
+
+   .page-shell {
+    max-width: 1800px;
+   }
+
+   .full-bleed {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+   }
+
+   .circular-text {
+    animation: rotate 20s linear infinite;
+   }
+
+   .hero-panel {
+    aspect-ratio: 5430 / 2701;
+   }
+
+   .hero-title {
+    font-family: 'Arboria Black', 'Montserrat', sans-serif;
+    font-size: clamp(3.7rem, 5.75vw, 9.85rem);
+    line-height: 1;
+    letter-spacing: .02em;
+    transform: translateX(-4%) translateY(-21%);
+   }
+
+   .hero-wrap-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(7.5rem, 12.5vw, 12.75rem) minmax(0, 1fr);
+    align-items: center;
+   }
+
+   .hero-full-row {
+    display: block;
+   }
+
+   .hero-wrap-left {
+    grid-column: 1;
+    text-align: right;
+   }
+
+   .hero-wrap-right {
+    grid-column: 3;
+    text-align: left;
+   }
+
+   .hero-person-cutout {
+    /*
+     The transparent PNG is the same canvas size as the background image.
+     Placing it above the headline masks the center of the text so the copy
+     appears to wrap around the athlete's silhouette.
+    */
+   }
+
+   .product-panel {
+    background: linear-gradient(180deg, #ffffff 0%, rgb(234 223 214 / 0.88) 8%, #eadfd6 17%, #eadfd6 100%);
+   }
+
+   .product-content {
+    min-height: clamp(900px, 68vw, 1060px);
+   }
+
+   .product-overflow {
+    min-height: clamp(110px, 8vw, 140px);
+   }
+
+   .stacked-title {
+    font-family: 'Arboria Black', 'Montserrat', sans-serif;
+    font-size: clamp(4.5rem, 8.6vw, 8.7rem);
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+   }
+
+   .highlight-title {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+   }
+
+   .copy-block {
+    max-width: 580px;
+    width: min(38vw, 580px);
+   }
+
+   .jar-hand {
+    left: calc((100% - 100vw) / 2);
+    top: clamp(24rem, 34vw, 33rem);
+    width: clamp(39rem, 54vw, 61rem);
+   }
+
+   .scoop-scene {
+    right: calc((100% - 100vw) / 2);
+    width: clamp(760px, 61vw, 1110px);
+   }
+
+   .hand-image {
+    width: 68.1%;
+    height: 100%;
+    max-width: none;
+    object-fit: contain;
+    object-position: right top;
+   }
+
+   .circle-copy {
+    font-family: 'Arboria Bold', 'Montserrat', sans-serif;
+    fill: #242225;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+   }
+
+   @media (max-width: 1100px) {
+    .stacked-title {
+     font-size: clamp(3.6rem, 11vw, 6.4rem);
+    }
+
+    .scoop-scene {
+     top: clamp(260px, 34vw, 340px);
+     width: min(700px, 104vw);
+    }
+
+    .jar-hand {
+     left: calc((100% - 100vw) / 2);
+     top: clamp(20rem, 48vw, 28rem);
+     width: min(50rem, 104vw);
+    }
+
+    .copy-block {
+     margin-left: auto;
+     margin-right: auto !important;
+     margin-top: clamp(600px, 74vw, 700px) !important;
+     width: min(88vw, 580px);
+    }
+   }
+
+   @media (max-width: 767px) {
+    .hero-title {
+     font-size: clamp(1.15rem, 5vw, 3.75rem);
+     transform: translateX(-4.2%) translateY(-15%);
+     line-height: 1;
+     letter-spacing: 0.1em;
+    }
+
+    .hero-wrap-row {
+     grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
+    }
+
+    .scoop-scene {
+     right: calc((100% - 100vw) / 2);
+     top: clamp(220px, 52vw, 320px);
+     width: min(590px, 114vw);
+    }
+
+    .copy-block {
+     margin-top: clamp(560px, 100vw, 680px) !important;
+     width: 100%;
+    }
+   }
+
+   @keyframes rotate {
+    from {
+     transform: rotate(0deg);
+    }
+    to {
+     transform: rotate(360deg);
+    }
+   }
+  </style>
+ </head>
+ <body class="bg-white text-[#242225] overflow-x-hidden">
+  <main class="page-shell mx-auto pt-10 md:pt-24">
+   <!-- Hero Section -->
+   <section class="hero-panel relative w-full overflow-hidden">
+    <img alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky" class="absolute inset-0 z-0 w-full h-full object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"/>
+    <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/5 via-transparent to-transparent"></div>
+    <div class="absolute inset-x-0 top-[10%] z-20 px-3 md:px-8 pointer-events-none">
+     <h1 class="hero-title mx-auto max-w-[1780px] font-black text-center uppercase">
+      <span class="text-white block">
+       A NEXT GEN FORMULA
+      </span>
+      <span class="hero-full-row block">
+       <span class="text-white">
+        BUILT FOR
+       </span>
+       <span class="text-[#242225]">
+        PERFORMANCE,
+       </span>
+      </span>
+      <span class="hero-wrap-row text-[#242225]">
+       <span class="hero-wrap-left">
+        RECOVERY
+       </span>
+       <span class="hero-wrap-right">
+        &amp; RESULTS.
+       </span>
+      </span>
+     </h1>
+    </div>
+    <img alt="" aria-hidden="true" class="hero-person-cutout absolute inset-0 z-30 w-full h-full object-contain pointer-events-none select-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8_man_no_back.png"/>
+   </section>
+
+   <!-- Product Details Section -->
+   <section class="product-panel full-bleed relative">
+    <div class="product-content page-shell relative mx-auto overflow-visible px-7 pt-16 md:px-20 md:pt-20 lg:px-24">
+     <!-- Left Column -->
+     <div class="relative z-20 w-full max-w-[min(560px,44vw)] text-center max-[1100px]:max-w-[58vw] max-[767px]:max-w-full lg:pt-2">
+      <h2 class="stacked-title font-black uppercase">
+       <span class="block">
+        SAME
+       </span>
+       <span class="block">
+        WORK.
+       </span>
+       <span class="highlight-title mt-7 inline-block bg-[#ffa171] px-4 pb-2">
+        BETTER
+       </span>
+       <span class="highlight-title mt-4 inline-block bg-[#ffa171] px-4 pb-2">
+        GAINS.
+       </span>
+      </h2>
+     </div>
+
+     <!-- Jar Image with Hand -->
+     <img alt="A hand holding a black supplement jar labeled FLIP 8 with orange and white text" class="jar-hand absolute z-10 max-w-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-jar-hand-2.webp"/>
+
+     <!-- Right Column -->
+     <!-- Circular Text, Scoop, and Hand -->
+     <div class="scoop-scene absolute top-10 z-30 md:top-8 lg:top-6">
+      <div class="relative aspect-[2.35/1] w-full">
+       <img alt="" aria-hidden="true" class="hand-image absolute right-0 top-0 z-20 pointer-events-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only_v2.webp"/>
+       <div class="absolute right-[58.5%] top-[9%] z-10 h-[84%] w-auto">
+        <img alt="A scoop of white supplement powder being held by a hand" class="h-full w-auto max-w-none object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
+       </div>
+       <div class="absolute right-[48.5%] top-[51%] z-30 h-[122%] aspect-square -translate-y-1/2">
+        <svg class="h-full w-full circular-text" viewBox="0 0 200 200">
+         <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
+         </path>
+         <text class="circle-copy">
+          <textPath href="#circlePath">
+           SMARTER RECOVERY • AMINO ACID SUPPORT •
+          </textPath>
+         </text>
+        </svg>
+       </div>
+      </div>
+     </div>
+
+     <!-- Descriptive Text -->
+     <div class="copy-block relative z-30 ml-auto mt-[560px] pb-20 md:mt-[585px] lg:mr-12 lg:mt-[560px] xl:mr-20">
+      <h4 class="mb-10 text-2xl font-black leading-tight tracking-[0.02em] uppercase md:text-[2rem]">
+       ONE SCOOP OF FLIP 8 IS DESIGNED
+       <br class="hidden md:block"/>
+       TO TARGET MULTIPLE PHYSIOLOGICAL
+       <br class="hidden md:block"/>
+       PILLARS OF PERFORMANCE:
+      </h4>
+      <p class="text-2xl font-bold leading-[1.45] tracking-[0.01em] md:text-[2rem]">
+       Muscular output, endurance capacity, cellular energy metabolism, hydration, and recovery, so training effort actually translates into results.
+      </p>
+     </div>
+    </div>
+   </section>
+  <div class="product-overflow full-bleed bg-white"></div>
+  </main>
+ </body>
+</html>
