@@ -43,6 +43,7 @@
     font-size: clamp(1.7rem, 4.7vw, 4.45rem);
     line-height: 0.94;
     letter-spacing: -0.055em;
+    transform: translateX(-3%);
    }
 
    .hero-wrap-row {
@@ -82,7 +83,7 @@
    }
 
    .stacked-title {
-    font-size: clamp(4.7rem, 8vw, 7.6rem);
+    font-size: clamp(3.9rem, 7.5vw, 7.6rem);
     line-height: 0.82;
     letter-spacing: -0.065em;
    }
@@ -99,20 +100,45 @@
 
    .scoop-scene {
     right: calc((100% - 100vw) / 2);
-    width: clamp(620px, 50vw, 900px);
+    width: clamp(840px, 67vw, 1220px);
+   }
+
+   @media (max-width: 1100px) {
+    .stacked-title {
+     font-size: clamp(3.2rem, 10vw, 5.8rem);
+    }
+
+    .scoop-scene {
+     top: clamp(260px, 34vw, 340px);
+     width: min(760px, 112vw);
+    }
+
+    .copy-block {
+     margin-left: auto;
+     margin-right: auto !important;
+     margin-top: clamp(600px, 74vw, 700px) !important;
+     width: min(88vw, 580px);
+    }
    }
 
    @media (max-width: 767px) {
+    .hero-title {
+     font-size: clamp(1.15rem, 4vw, 1.45rem);
+     transform: translateX(-2%);
+    }
+
     .hero-wrap-row {
      grid-template-columns: minmax(0, 1fr) clamp(4.7rem, 18vw, 7rem) minmax(0, 1fr);
     }
 
     .scoop-scene {
      right: calc((100% - 100vw) / 2);
-     width: min(620px, 120vw);
+     top: clamp(220px, 52vw, 320px);
+     width: min(640px, 124vw);
     }
 
     .copy-block {
+     margin-top: clamp(560px, 100vw, 680px) !important;
      width: 100%;
     }
    }
@@ -133,7 +159,7 @@
    <section class="hero-panel relative w-full overflow-hidden">
     <img alt="Man in black athletic gear drinking from a shaker bottle, standing on rocks in a quarry under a clear blue sky" class="absolute inset-0 z-0 w-full h-full object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip-8-hero-athlete.webp"/>
     <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/5 via-transparent to-transparent"></div>
-    <div class="absolute inset-x-0 top-[11%] z-20 px-3 md:px-8 pointer-events-none">
+    <div class="absolute inset-x-0 top-[14%] z-20 px-3 md:px-8 pointer-events-none">
      <h1 class="hero-title mx-auto max-w-[1200px] font-black text-center uppercase">
       <span class="text-white block">
        A NEXT GEN FORMULA
@@ -163,7 +189,7 @@
    <section class="product-panel full-bleed relative">
     <div class="product-content page-shell relative mx-auto overflow-visible px-7 pt-16 md:px-20 md:pt-20 lg:px-24">
      <!-- Left Column -->
-     <div class="relative z-20 max-w-[560px] text-center lg:pt-2">
+     <div class="relative z-20 w-full max-w-[min(560px,44vw)] text-center max-[1100px]:max-w-[58vw] max-[767px]:max-w-full lg:pt-2">
       <h2 class="stacked-title font-black uppercase">
        <span class="block">
         SAME
@@ -188,10 +214,10 @@
      <div class="scoop-scene absolute top-10 z-30 md:top-8 lg:top-6">
       <div class="relative aspect-[2.35/1] w-full">
        <img alt="A hand reaching in from the right toward the scoop" class="absolute right-0 top-0 z-20 h-full w-auto max-w-none pointer-events-none" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-hand-scoop-only.webp"/>
-       <div class="absolute right-[74%] top-0 z-10 h-full w-auto">
+       <div class="absolute right-[77%] top-0 z-10 h-full w-auto">
         <img alt="A scoop of white supplement powder being held by a hand" class="h-full w-auto max-w-none rotate-[-13deg] object-contain" src="https://cdn.shopify.com/s/files/1/0790/6174/5965/files/flip8-powder-scoop.webp"/>
        </div>
-       <div class="absolute right-[73%] top-1/2 z-30 h-[96%] w-[30%] -translate-y-1/2">
+       <div class="absolute right-[76%] top-1/2 z-30 h-[96%] w-[30%] -translate-y-1/2">
         <svg class="h-full w-full circular-text" viewBox="0 0 200 200">
          <path d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent" id="circlePath">
          </path>
@@ -206,7 +232,7 @@
      </div>
 
      <!-- Descriptive Text -->
-     <div class="copy-block relative z-30 ml-auto mt-[470px] pb-20 md:mt-[520px] lg:mr-12 lg:mt-[500px] xl:mr-20">
+     <div class="copy-block relative z-30 ml-auto mt-[560px] pb-20 md:mt-[585px] lg:mr-12 lg:mt-[560px] xl:mr-20">
       <h4 class="mb-10 text-2xl font-black leading-tight tracking-[0.02em] uppercase md:text-[2rem]">
        ONE SCOOP OF FLIP 8 IS DESIGNED
        <br class="hidden md:block"/>
